@@ -1,0 +1,185 @@
+@import 'src/shared/styles/variables/colors.scss';
+@import 'src/shared/styles/variables/breakpoints.scss';
+
+.storiesContainer {
+}
+
+.header {
+    padding: 16px 30px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.3px;
+    background-color: $bg-grey;
+
+    @media (max-width: $md) {
+        padding: 20px 17px;
+    }
+}
+
+.pageIndicator {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $md) {
+        display: none;
+    }
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .addBtn {
+        display: none;
+    }
+
+    @media (max-width: $md) {
+        justify-content: space-between;
+        
+        .addBtn {
+            display: block;
+        }
+    }
+
+}
+
+.title {
+    margin: 0 0 16px 0;
+}
+
+.controlPanel {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $md) {
+        justify-content: space-between;
+    }
+
+    .addBtn {
+        display: block;
+
+        @media (max-width: $md) {
+            display: none;
+        }
+    }
+}
+
+.filtersPanel {
+    display: flex;
+
+    @media (max-width: $md) {
+        width: 100%;
+        justify-content: space-evenly;
+
+        .statusFilterWrapper {
+            .statusFilter {
+                width: 164px;
+            }
+        }
+    }
+
+    .searchField {
+        display: flex;
+        align-items: center;
+        padding: 8px 0 8px 12px;
+        height: 36px;
+        box-sizing: border-box;
+        background: white;
+
+        input {
+            border: none;
+            outline: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: -0.14px;
+            width: calc(100% - 36px);
+            // margin-left: 12px;
+        }
+
+        .searchIcon {
+            width: 36px;
+            height: 36px;
+            background-color: $grey;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0 3px 3px 0;;
+        }
+        
+    }
+
+    .statusFilterWrapper {
+        display: inherit;
+        border: 1px solid $grey;
+        border-radius: 3px;
+        width: 200px;
+        box-sizing: border-box;
+        padding: 0 8px;
+        margin-left: 30px;
+        background: white;
+        height: 36px;
+
+        @media (max-width: $md) {
+            width: 164px;
+            margin-left: 16px;
+        }
+    }
+
+    .statusFilter {
+        font-family: 'Euclid Circular B';
+        width: 190px;  
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        
+
+        @media (max-width: $md) {
+            width: 49%;
+            margin-left: 16px;
+        }
+    }
+}
+
+.addBtn {
+    width: 125px;
+    height: 36px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    color: white;
+    display: inline-flex;
+    padding: 4px 16px;
+    background-color: $green;
+    border-radius: 3px;
+    align-items: center;
+    font-family: 'Euclid Circular B';
+    letter-spacing: -0.16px;
+    cursor: pointer;
+
+    .icon {
+        width: 12px;
+        height: 12px;
+        margin-right: 4px;
+    }
+}
+
+.searchField {
+    width: 376px;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    
+    @media (max-width: $md) {
+        width: 164px;
+    }
+}

@@ -1,0 +1,74 @@
+@import 'src/shared/styles/variables/colors.scss';
+
+.aside {
+    grid-area: aside-left;
+    width: 228px;
+    height: 100%;
+    color: white;
+    background-color: $primary-blue;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.visible {
+    transform: translateX(0);
+    transition: transform 200ms ease-out;
+}
+
+.hidden {
+    transform: translateX(-228px);
+    transition: transform 200ms ease-out;
+}
+
+.menuSection {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+
+    &:before {
+        content: '';
+        height: 1px;
+        width: 100%;
+        background: linear-gradient(90deg, #484848 0%, rgba(72, 72, 72, 0.00) 100%);
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .menuItem:last-of-type {
+        margin-bottom: 20px;
+    }
+
+}
+
+.menuItem {
+    padding: 12px 20px;
+    display: flex;
+
+    &:hover, &.active {
+        background: $primary-blue-hovered;
+        cursor: pointer;
+        border-left: 4px solid $border-color;
+        align-items: baseline;
+
+        a {
+            display: block;
+            box-sizing: content-box;
+            margin-left: -4px;
+        }
+    }
+    
+    a {
+        color: #fff;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+        text-decoration: none;
+    }
+
+    .icon {
+        margin-right: 8px;
+        margin-bottom: 3px;
+        vertical-align: text-bottom;
+    }
+}

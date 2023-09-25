@@ -1,0 +1,35 @@
+@import 'src/shared/styles/variables/colors.scss';
+@import 'src/shared/styles/variables/breakpoints.scss';
+
+.main {
+    grid-area: main;
+    border-bottom: 40px solid $primary-blue;
+    border-right: 30px solid $primary-blue;
+
+    .contentContainer {
+        border: 4px solid white;
+        border-radius: 0 0 6px 6px;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+    }
+
+    @media (max-width: $md) {
+        grid-column: 1 / 3;
+        border: none;
+    }
+
+    &.overlapped {
+        border: none;
+        &:before {
+            content: "";
+            display: block;
+            width: calc(100% - 228px);
+            height: calc(100% - 60px);
+            pointer-events: none;
+            background: #000;
+            position: absolute;
+            opacity: 0.8;
+            transform: translateX(228px);
+        }
+    }
+}

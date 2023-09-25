@@ -1,0 +1,25 @@
+@import url('https://fonts.cdnfonts.com/css/euclid-circular-b');
+
+@use '../shared/styles/reboot.scss';
+
+
+body {
+    margin: 0;
+    font-family: 'Euclid Circular B', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  header {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+  .app {
+  }

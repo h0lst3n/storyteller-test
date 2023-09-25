@@ -1,0 +1,11 @@
+.layout {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    grid-template-columns: minmax(auto, 228px) auto;
+    grid-template-areas: 'header header' 'aside-left main' 'aside-left main';
+
+    &.withoutAside {
+
+    }
+}
