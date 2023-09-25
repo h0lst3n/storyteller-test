@@ -18,11 +18,8 @@ const storiesSlice = createSlice({
     },
     extraReducers: builder => {
         builder.addCase(fetchStories.fulfilled, (state, { payload }) => {
-            console.log('PAYLOAD', payload);
             const { total, page, pageCount,records } = payload;
-            console.log(total,
-                page,
-                pageCount);
+            
             state.records = [...state.records, ...records];
             state.offset += state.limit;
             state.total = total;
